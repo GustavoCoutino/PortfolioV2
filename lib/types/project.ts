@@ -10,7 +10,7 @@ export interface Project {
   liveUrl: string;
 }
 
-type Skill = {
+export type Skill = {
   name: string;
   url: string;
 };

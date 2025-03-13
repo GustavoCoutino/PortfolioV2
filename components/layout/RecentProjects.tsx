@@ -19,7 +19,7 @@ export function RecentProjects() {
             <img
               src={item.img}
               alt=""
-              className="w-128 h-88 object-cover rounded-t-lg mx-auto"
+              className="w-128 h-88 object-cover mx-auto"
             />
             <p className="p-4">{item.description}</p>
           </div>

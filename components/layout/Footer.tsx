@@ -13,18 +13,24 @@ export function Footer() {
           </div>
           <div className="flex space-x-6">
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/GustavoCoutino"
               className="text-gray-400 hover:text-white transition"
             >
               GitHub
             </Link>
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/gustavo-coutino-ocampo/"
               className="text-gray-400 hover:text-white transition"
             >
               LinkedIn
             </Link>
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="mailto:gcoutino04@gmail.com"
               className="text-gray-400 hover:text-white transition"
             >
