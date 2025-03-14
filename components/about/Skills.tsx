@@ -1,4 +1,4 @@
-import { SkillsCard } from "@/components/features/about/SkillsCard";
+import { SkillsCard } from "@/components/about/SkillsCard";
 export function Skills() {
   const programmingLanguages = [
     { name: "JavaScript", experience: "3 years" },
@@ -39,11 +39,7 @@ export function Skills() {
         <h2 className="text-6xl font-bold mb-8">Technologies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech) => (
-            <SkillsCard
-              key={tech.name}
-              name={tech.name}
-              experience={tech.experience}
-            />
+            <SkillsCard key={tech.name} name={tech.name} />
           ))}
         </div>
       </div>

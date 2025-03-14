@@ -30,7 +30,6 @@ export const projects: Project[] = [
       { name: "Python", url: "/images/python.svg" },
       { name: "Flask", url: "/images/flask.svg" },
       { name: "Firebase", url: "/images/firebase.svg" },
-      { name: "Gemini API", url: "/images/googlegemini.svg" },
     ],
     startDate: "November 2024",
     endDate: "November 2024",

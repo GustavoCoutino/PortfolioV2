@@ -1,5 +1,5 @@
-import { Description } from "@/components/features/about/Description";
-import { Skills } from "@/components/features/about/Skills";
+import { Description } from "@/components/about/Description";
+import { Skills } from "@/components/about/Skills";
 
 export default function Page() {
   return (
