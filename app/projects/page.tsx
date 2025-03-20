@@ -1,4 +1,4 @@
-import { ProjectContainer } from "@/components/features/project/ProjectContainer";
+import { ProjectContainer } from "@/components/project/ProjectContainer";
 export default function Page() {
   return (
     <main className="w-full h-screen pt-4">
