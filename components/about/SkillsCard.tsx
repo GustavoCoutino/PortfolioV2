@@ -1,6 +1,5 @@
 import React from "react";
 
-// Define the props interface for TypeScript
 interface SkillsCardProps {
   name: string;
   experience?: string;
