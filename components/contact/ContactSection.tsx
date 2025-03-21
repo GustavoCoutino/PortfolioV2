@@ -35,7 +35,7 @@ export function ContactSection() {
               <input
                 type="text"
                 id="name"
-                className=" mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-white"
+                className=" mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-white text-black ps-2"
                 value={contactForm.name}
                 onChange={(e) => handleChange(e)}
               />
@@ -50,7 +50,7 @@ export function ContactSection() {
               <input
                 type="email"
                 id="email"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-white"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-white text-black ps-2"
                 value={contactForm.email}
                 onChange={(e) => handleChange(e)}
               />
@@ -68,7 +68,7 @@ export function ContactSection() {
             <textarea
               id="message"
               rows={6}
-              className="bg-white mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="bg-white mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 ps-2 text-black"
               value={contactForm.message}
               onChange={(e) => handleChange(e)}
             ></textarea>

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/lib/data/projects";
 
 export function RecentProjects() {
   return (
-    <div className="pt-15 flex flex-col justify-center w-2/3 mx-auto">
+    <div className="pt-15 flex flex-col justify-center w-full md:w-2/3 mx-auto md:px-0 px-4">
       <h1 className="mb-6 text-center font-bold text-3xl sm:text-4xl">
         Recent projects
       </h1>
@@ -16,11 +17,14 @@ export function RecentProjects() {
             <h1 className="text-xl font-bold bg-white text-black p-4">
               {item.name}
             </h1>
-            <div className="w-full aspect-video overflow-hidden">
-              <img
+            <div className="w-full aspect-video md:h-64 md:w-96 mx-auto overflow-hidden relative">
+              <Image
                 src={item.img}
                 alt={item.name}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 384px"
+                className="object-cover"
+                priority
               />
             </div>
             <p className="p-4">{item.description}</p>

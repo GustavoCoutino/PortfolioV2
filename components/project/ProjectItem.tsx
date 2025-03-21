@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Project } from "@/lib/types/project";
 import { Skill } from "@/lib/types/project";
 export function ProjectItem(props: { project: Project }) {
@@ -12,11 +13,14 @@ export function ProjectItem(props: { project: Project }) {
       <h1 className="text-xl font-bold bg-white text-black p-4">
         {project.name}
       </h1>
-      <div className="w-full aspect-video overflow-hidden">
-        <img
+      <div className="w-full aspect-video overflow-hidden relative">
+        <Image
           src={project.img}
           alt={project.name}
-          className="w-full h-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 384px"
+          className="object-cover"
+          priority
         />
       </div>
       <p className="p-4 font-bold">{project.description}</p>
@@ -27,10 +31,12 @@ export function ProjectItem(props: { project: Project }) {
           className="flex flex-row p-4 items-center"
           href={project.githubUrl}
         >
-          <img
+          <Image
             className="bg-white rounded-sm h-6 w-6 mr-2"
             src="/images/githublogo.png"
             alt="githublogo"
+            width={6}
+            height={6}
           />
           <p className="hover:text-blue-500 transition p-4">
             Github repository
@@ -45,10 +51,12 @@ export function ProjectItem(props: { project: Project }) {
               key={skill.name}
               className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition px-3 py-2 rounded-md"
             >
-              <img
+              <Image
                 src={skill.url}
                 alt={skill.name}
                 className="bg-white rounded-sm h-6 w-6"
+                width={6}
+                height={6}
               />
               <span>{skill.name}</span>
             </div>
