@@ -15,7 +15,7 @@ export function ProjectItem(props: { project: Project }) {
   return (
     <div
       key={project.name}
-      className="rounded-lg flex flex-col bg-white/5 backdrop-blur-sm shadow-md border border-white/10 overflow-hidden"
+      className="rounded-lg flex flex-col bg-white/5 backdrop-blur-sm shadow-md border border-white/10 overflow-hidden h-full"
     >
       <h1 className="text-xl font-bold bg-white text-black p-4">
         {project.name}
@@ -49,7 +49,7 @@ export function ProjectItem(props: { project: Project }) {
         )}
       </div>
       <p className="p-4 font-bold">{project.description}</p>
-      <section className="mt-2">
+      <section className="mt-auto">
         <div className="flex justify-between items-center px-4 py-2 border-b border-white/20">
           <h3 className="text-lg font-semibold">Skills</h3>
           <button
