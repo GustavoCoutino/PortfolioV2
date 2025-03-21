@@ -7,7 +7,7 @@ export function RecentProjects() {
       <h1 className="mb-6 text-center font-bold text-3xl sm:text-4xl">
         Recent projects
       </h1>
-      <div className="flex gap-6">
+      <div className="flex gap-6 flex-col md:flex-row">
         {projects.slice(0, 2).map((item) => (
           <div
             key={item.name}
@@ -16,11 +16,13 @@ export function RecentProjects() {
             <h1 className="text-xl font-bold bg-white text-black p-4">
               {item.name}
             </h1>
-            <img
-              src={item.img}
-              alt=""
-              className="w-128 h-88 object-cover mx-auto"
-            />
+            <div className="w-full aspect-video overflow-hidden">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <p className="p-4">{item.description}</p>
           </div>
         ))}

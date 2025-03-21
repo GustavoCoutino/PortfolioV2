@@ -12,11 +12,13 @@ export function ProjectItem(props: { project: Project }) {
       <h1 className="text-xl font-bold bg-white text-black p-4">
         {project.name}
       </h1>
-      <img
-        src={project.img}
-        alt=""
-        className="w-full h-64 object-cover mx-auto"
-      />
+      <div className="w-full aspect-video overflow-hidden">
+        <img
+          src={project.img}
+          alt={project.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
       <p className="p-4 font-bold">{project.description}</p>
       {project.githubUrl && (
         <Link
@@ -36,8 +38,8 @@ export function ProjectItem(props: { project: Project }) {
         </Link>
       )}
       <div>
-        <h3 className="text-lg font-semibold mb-2">Skills</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <h3 className="text-lg font-semibold mb-2 ps-4">Skills</h3>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-2 px-4 py-4">
           {skills.map((skill) => (
             <div
               key={skill.name}
